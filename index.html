@@ -26,13 +26,28 @@
   <script>
     $(document).ready(function () {
 
+      /* Obtain canvas context */
       var canvas = document.getElementById("myCanvas");
-      //var canvas = $("#myCanvas");
       var ctxt = canvas.getContext('2d');
 
 
       $("#button_draw_triangle").click(function () {
-        /* Your code goes here for Step 2 */
+
+        /* Colors & Line Width settings */
+        ctxt.fillStyle = '#f00';
+        ctxt.strokeStyle = '#000';
+        ctxt.lineWidth = 3;
+
+        /* Drawing the triangle with coordinates */
+        ctxt.beginPath();
+        ctxt.moveTo(60, 240);
+        ctxt.lineTo(240, 240);
+        ctxt.lineTo(150, 60);
+        ctxt.closePath();
+
+        /* Applying colors to triangle */
+        ctxt.fill();
+        ctxt.stroke();
 
       });
 
