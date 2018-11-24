@@ -30,13 +30,12 @@
       var canvas = document.getElementById("myCanvas");
       var ctxt = canvas.getContext('2d');
 
+      /* Colors & Line Width settings */
+      ctxt.fillStyle = '#f00';
+      ctxt.strokeStyle = '#000';
+      ctxt.lineWidth = 3;
 
       $("#button_draw_triangle").click(function () {
-
-        /* Colors & Line Width settings */
-        ctxt.fillStyle = '#f00';
-        ctxt.strokeStyle = '#000';
-        ctxt.lineWidth = 3;
 
         /* Drawing the triangle with coordinates */
         ctxt.beginPath();
@@ -46,17 +45,11 @@
         ctxt.closePath();
 
         /* Applying colors to triangle */
-        ctxt.fill();
-        ctxt.stroke();
+        paintTriangle(ctxt);
 
       });
 
       $("#button_draw_rotated_triangle").click(function () {
-
-        /* Colors & Line Width settings */
-        ctxt.fillStyle = '#f00';
-        ctxt.strokeStyle = '#000';
-        ctxt.lineWidth = 3;
 
         /* Saving context state */
         ctxt.save();
@@ -76,8 +69,7 @@
         ctxt.restore();
 
         /* Applying colors to triangle */
-        ctxt.fill();
-        ctxt.stroke();
+        paintTriangle(ctxt);
 
       });
 
@@ -89,6 +81,11 @@
       });
 
     });
+
+    function paintTriangle(ctxt) {
+      ctxt.fill();
+      ctxt.stroke();
+    }
   </script>
 </head>
 
