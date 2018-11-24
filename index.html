@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>11 - Canvas</title>
-    <meta charset="utf-8">
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.js"
-      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-      crossorigin="anonymous"></script>
-	<!-- Tufte CSS official doc: https://edwardtufte.github.io/tufte-css/ -->
-    <link rel="stylesheet" href=
-      "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.1/tufte.css">
-    <style>
-      body { margin: 20px; }
-      #container { display: block; }
-      #draw_buttons { float: left; width: 100%; margin-top: 10px; }
-    </style>
 
-    <script>
-    $(document).ready(function() {
+<head>
+  <title>11 - Canvas</title>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.1/tufte.css">
+  <style>
+    body {
+      margin: 20px;
+    }
 
-      /* Step 1: Your code goes here */
+    #container {
+      display: block;
+    }
+
+    #draw_buttons {
+      float: left;
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+
+      var canvas = document.getElementById("myCanvas");
+      //var canvas = $("#myCanvas");
+      var ctxt = canvas.getContext('2d');
 
 
-      $("#button_draw_triangle").click(function() {
+      $("#button_draw_triangle").click(function () {
         /* Your code goes here for Step 2 */
 
       });
 
-      $("#button_draw_rotated_triangle").click(function() {
+      $("#button_draw_rotated_triangle").click(function () {
         /* Your code goes here for Step 3*/
 
       });
 
-      $("#button_clear_canvas").click(function() {
+      $("#button_clear_canvas").click(function () {
         /* Your code goes here for Step 4 */
 
       });
 
     });
-    </script>
-  </head>
+  </script>
+</head>
 
-  <body>
+<body>
 
-    <h2>Manipulate the Canvas</h2>
-    <canvas id="myCanvas"
-      width="300" height="300"
-      style="border:1px solid #000000;"></canvas>
+  <h2>Manipulate the Canvas</h2>
+  <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;"></canvas>
 
-    <div id="draw_buttons">
-      <button id="button_draw_triangle">Draw Triangle</button>
-      <button id="button_draw_rotated_triangle">Draw Rotated Triangle</button>
-      <button id="button_clear_canvas">Clear Canvas</button>
-    </div>
+  <div id="draw_buttons">
+    <button id="button_draw_triangle">Draw Triangle</button>
+    <button id="button_draw_rotated_triangle">Draw Rotated Triangle</button>
+    <button id="button_clear_canvas">Clear Canvas</button>
+  </div>
 
-  </body>
+</body>
+
 </html>
